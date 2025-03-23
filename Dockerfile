@@ -10,6 +10,8 @@ RUN apt-get update && apt-get install -y wrk curl && \
 
 COPY . .
 RUN chmod +x test.sh  && \
-    /root/.local/bin/uv sync
+    /root/.local/bin/uv sync && \
+    mkdir -p /logs && \
+    chmod 777 /logs
 
 CMD ["/test/test.sh"]
