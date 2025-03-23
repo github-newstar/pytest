@@ -6,10 +6,11 @@ touch /logs/py-test-logs.log /logs/wrk-test-logs.log
 touch /tmp/full_output.log /tmp/full_wrk_output.log
 # curl -sSf https://astral.sh/uv/install.sh | sh 
 /root/.local/bin/uv run test_redis.py 2>&1 | tee -a /logs/py-test-logs.log
-tail -n 15 /tmp/full_output.log > /logs/py-test-logs.lo
+tail -n 15 /logs/py-test-logs.log > /logs/py-test-logs.log
+
 
 wrk -t2 -c10 -d10s http://gateServer:8080 2>&1 | tee -a /logs/wrk-test-logs.log
-tail -n 15 /tmp/full_wrk_output.log > /logs/wrk-test-logs.log
+tail -n 15 /logs/wrk-test-logs.log > /logs/wrk-test-logs.log
 
 echo "Tests completed with status $EXIT_CODE at $(date)"
 # 将退出状态码写入日志
