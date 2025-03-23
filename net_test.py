@@ -340,6 +340,7 @@ def run_concurrent_test(concurrency):
     global registration_successes, registration_failures, login_successes, login_failures, request_latencies
     global start_time, num_users
     
+    reset_database()
     active_threads = []
     max_threads = concurrency * 3  # 保持足够的线程以维持所需并发度
     
