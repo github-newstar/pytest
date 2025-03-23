@@ -2,6 +2,7 @@
 # 运行测试并将输出同时写入标准输出和日志文件
 echo "Starting tests at $(date)"
 cd /test
+touch /logs/py-test-logs.log /logs/wrk-test-logs.log
 # curl -sSf https://astral.sh/uv/install.sh | sh 
 /root/.local/bin/uv run test_redis.py 2>&1 | tee -a /logs/py-test-logs.log
 tail -n 15 /tmp/full_output.log > /logs/py-test-logs.lo
