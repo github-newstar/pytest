@@ -9,7 +9,7 @@ RUN apt-get update && apt-get install -y wrk curl && \
 
 
 COPY . .
-RUN chmod +x test.sh  
-ENV PATH="/root/.local/bin:${PATH}"
+RUN chmod +x test.sh  && \
+    /root/.local/bin/uv sync
 
 CMD ["/test/test.sh"]
