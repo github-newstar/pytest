@@ -3,8 +3,7 @@
 echo "Starting tests at $(date)"
 cd /test
 # curl -sSf https://astral.sh/uv/install.sh | sh 
-alias uv=/root/.local/bin/uv
-uv run test_redis.py 2>&1 | tee -a /logs/py-test-logs.log
+/root/.local/bin/uv run test_redis.py 2>&1 | tee -a /logs/py-test-logs.log
 tail -n 15 /tmp/full_output.log > /logs/py-test-logs.lo
 
 wrk -t2 -c10 -d10s http://gateServer:8080 2>&1 | tee -a /logs/wrk-test-logs.log
