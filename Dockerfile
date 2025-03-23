@@ -12,4 +12,4 @@ COPY . .
 RUN chmod +x test.sh  
 ENV PATH="/root/.local/bin:${PATH}"
 
-CMD ["/test/test.sh"]
+# CMD ["/test/test.sh"]
