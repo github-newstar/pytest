@@ -11,7 +11,7 @@ RUN apt-get update && apt-get install -y wrk && \
 
 COPY . .
 
-ENV PATH="/root/.cargo/bin:${PATH}"
+ENV PATH="/root/.local/bin:${PATH}"
 RUN uv sync
 
 CMD ["/test/test.sh"]
