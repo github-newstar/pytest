@@ -10,5 +10,6 @@ RUN apt-get update && apt-get install -y wrk curl && \
 
 COPY . .
 RUN chmod +x test.sh  
+ENV PATH="/root/"
 
 CMD ["/test/test.sh"]
