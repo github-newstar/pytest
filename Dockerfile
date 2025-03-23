@@ -9,10 +9,7 @@ RUN apt-get update && apt-get install -y wrk && \
 ENV PATH="/root/.local/bin:${PATH}"
 
 COPY . .
-RUN chmod +x test.sh && \
-
-
-
-RUN ~/.local/uv sync
+RUN chmod +x test.sh  && \
+    /root/.local/uv sync
 
 CMD ["/test/test.sh"]
