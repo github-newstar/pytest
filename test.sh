@@ -4,7 +4,7 @@ echo "Starting tests at $(date)"
 cd /test
 touch /logs/py-test-logs.log /logs/wrk-test-logs{1,2,3}.log
 # curl -sSf https://astral.sh/uv/install.sh | sh 
-/root/.local/bin/uv run net_test.py 2>&1 | tee -a /logs/py-test-logs.log
+/root/.local/bin/uv run net_test.py regular 2>&1 | tee -a /logs/py-test-logs.log
 tail -n 15 /logs/py-test-logs.log > /logs/py-test-logs.log
 
 
