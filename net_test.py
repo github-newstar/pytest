@@ -237,7 +237,7 @@ def pressure_test():
 def step_load_test():
     results = []
     # 测试不同并发级别
-    concurrency_levels = [5, 10, 20, 30, 50 ]
+    concurrency_levels = [5, 10, 20, 30, 50 , 75, 100]
     step_test_duration = 60  # 增加到30秒，给系统更多稳定时间
     step_users = 500 # 增加到500用户以产生更多负载
     
