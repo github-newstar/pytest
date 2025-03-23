@@ -7,6 +7,7 @@ import random
 import threading
 import pymysql  # 添加pymysql库
 
+
 #配置
 cf = ConfigParser()
 cf.read('api_conf.ini')
