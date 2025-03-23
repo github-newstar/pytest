@@ -1,7 +1,7 @@
 name: ci/cd Pipeline
 on:
   push:
-    branches: [main]
+    branches: [master]
 jobs:
   build:
     name: build and cache docker image
