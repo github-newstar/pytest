@@ -11,7 +11,7 @@ import pymysql  # 添加pymysql库
 #配置
 cf = ConfigParser()
 cf.read('api_conf.ini')
-base_url = cf.get('host','local_url')
+base_url = cf.get('host','docker_url')
 code_prefix = "code_"
 
 num_users = 1000
