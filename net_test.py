@@ -19,7 +19,7 @@ test_duration = 60
 report_interval = 5
 
 # 并发控制
-register_max_concurrent = 15  # 注册最大并发数
+register_max_concurrent = 20  # 注册最大并发数
 login_max_concurrent = 20     # 登录最大并发数
 register_semaphore = threading.Semaphore(register_max_concurrent)
 login_semaphore = threading.Semaphore(login_max_concurrent)
