@@ -14,7 +14,7 @@ cf.read('api_conf.ini')
 base_url = cf.get('host','docker_url')
 code_prefix = "code_"
 
-num_users = 1000
+num_users = 10000
 test_duration = 60
 report_interval = 5
 
